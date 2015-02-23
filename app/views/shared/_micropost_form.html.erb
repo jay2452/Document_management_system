@@ -4,10 +4,14 @@
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
   </div>
 
-  <span class="file">
+<% if @micropost.user.faculty1 %>
+	<span class="file">
   	<%= f.file_field :file, accept: 'image/jpg 
   									image/jpeg image/gif image/png document/doc document/docx document/pdf document/xls document/csv document/odb document/ppt' %>
   </span>
+<% end %>
+
+  
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
 
